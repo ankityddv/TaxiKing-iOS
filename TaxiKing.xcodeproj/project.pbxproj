@@ -15,6 +15,15 @@
 		360E55482428CB4C00F40C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360E55462428CB4C00F40C23 /* LaunchScreen.storyboard */; };
 		360E55532428CB4C00F40C23 /* TaxiKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E55522428CB4C00F40C23 /* TaxiKingTests.swift */; };
 		360E555E2428CB4C00F40C23 /* TaxiKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E555D2428CB4C00F40C23 /* TaxiKingUITests.swift */; };
+		3634407D242914260053A140 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634407C242914260053A140 /* CustomTextField.swift */; };
+		367BE99E2428CD4200BC1F0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 367BE99D2428CD4200BC1F0E /* GoogleService-Info.plist */; };
+		36DC574A24291D720002CE0E /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC574824291D720002CE0E /* CustomLoader.swift */; };
+		36DC574B24291D720002CE0E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC574924291D720002CE0E /* UIImage+Gif.swift */; };
+		36DC575124291F3C0002CE0E /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 36DC575024291F3C0002CE0E /* loader.gif */; };
+		36DC5753242921CA0002CE0E /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC5752242921CA0002CE0E /* AddInfoViewController.swift */; };
+		4CCCAA2181F80BEE22248111 /* libPods-TaxiKing-TaxiKingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD0C53E117CCE0D0DDD9C6 /* libPods-TaxiKing-TaxiKingUITests.a */; };
+		5A3006E62939FC8272F7A4EE /* libPods-TaxiKingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C007DF98AA081E27FD1B83 /* libPods-TaxiKingTests.a */; };
+		D3F955371AB922F9C923C063 /* libPods-TaxiKing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D150F531A3FE9BB61C5E0C69 /* libPods-TaxiKing.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		360E55382428CB4A00F40C23 /* TaxiKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C0DF175628D139B35D4796D /* Pods-TaxiKing-TaxiKingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing-TaxiKingUITests.debug.xcconfig"; path = "Target Support Files/Pods-TaxiKing-TaxiKingUITests/Pods-TaxiKing-TaxiKingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3096597F547C2E44EFCE86ED /* Pods-TaxiKingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKingTests.release.xcconfig"; path = "Target Support Files/Pods-TaxiKingTests/Pods-TaxiKingTests.release.xcconfig"; sourceTree = "<group>"; };
+		30FD0C53E117CCE0D0DDD9C6 /* libPods-TaxiKing-TaxiKingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiKing-TaxiKingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		360E55382428CB4A00F40C23 /* Taxi King.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taxi King.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		360E553B2428CB4B00F40C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		360E553D2428CB4B00F40C23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		360E553F2428CB4B00F40C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,18 @@
 		360E55592428CB4C00F40C23 /* TaxiKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxiKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		360E555D2428CB4C00F40C23 /* TaxiKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiKingUITests.swift; sourceTree = "<group>"; };
 		360E555F2428CB4C00F40C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3634407C242914260053A140 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		367BE99D2428CD4200BC1F0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Documents/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		36DC574824291D720002CE0E /* CustomLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLoader.swift; path = "../../../Downloads/Meme-O-Mania-App-master/Meme-O-Mania/Supporting Files/Design/CustomLoader.swift"; sourceTree = "<group>"; };
+		36DC574924291D720002CE0E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/Meme-O-Mania-App-master/Meme-O-Mania/Supporting Files/Design/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		36DC575024291F3C0002CE0E /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loader.gif; path = "../../../Downloads/Meme-O-Mania-App-master/Meme-O-Mania/Supporting Files/GIF/loader.gif"; sourceTree = "<group>"; };
+		36DC5752242921CA0002CE0E /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		38C007DF98AA081E27FD1B83 /* libPods-TaxiKingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiKingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4553A7E7A03919686D7B8656 /* Pods-TaxiKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing.debug.xcconfig"; path = "Target Support Files/Pods-TaxiKing/Pods-TaxiKing.debug.xcconfig"; sourceTree = "<group>"; };
+		76362508420A9063F8CFDC7D /* Pods-TaxiKing-TaxiKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing-TaxiKingUITests.release.xcconfig"; path = "Target Support Files/Pods-TaxiKing-TaxiKingUITests/Pods-TaxiKing-TaxiKingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8273DD9F4F455DCE992F96E4 /* Pods-TaxiKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing.release.xcconfig"; path = "Target Support Files/Pods-TaxiKing/Pods-TaxiKing.release.xcconfig"; sourceTree = "<group>"; };
+		AB6E8CA780BE2CEA21F88130 /* Pods-TaxiKingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKingTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxiKingTests/Pods-TaxiKingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D150F531A3FE9BB61C5E0C69 /* libPods-TaxiKing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiKing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F955371AB922F9C923C063 /* libPods-TaxiKing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3006E62939FC8272F7A4EE /* libPods-TaxiKingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCCAA2181F80BEE22248111 /* libPods-TaxiKing-TaxiKingUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3602C43B55B92195413B676C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4553A7E7A03919686D7B8656 /* Pods-TaxiKing.debug.xcconfig */,
+				8273DD9F4F455DCE992F96E4 /* Pods-TaxiKing.release.xcconfig */,
+				1C0DF175628D139B35D4796D /* Pods-TaxiKing-TaxiKingUITests.debug.xcconfig */,
+				76362508420A9063F8CFDC7D /* Pods-TaxiKing-TaxiKingUITests.release.xcconfig */,
+				AB6E8CA780BE2CEA21F88130 /* Pods-TaxiKingTests.debug.xcconfig */,
+				3096597F547C2E44EFCE86ED /* Pods-TaxiKingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		360E552F2428CB4A00F40C23 = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +123,15 @@
 				360E55512428CB4C00F40C23 /* TaxiKingTests */,
 				360E555C2428CB4C00F40C23 /* TaxiKingUITests */,
 				360E55392428CB4A00F40C23 /* Products */,
+				3602C43B55B92195413B676C /* Pods */,
+				F85A55CA6FD25606BF470E92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		360E55392428CB4A00F40C23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				360E55382428CB4A00F40C23 /* TaxiKing.app */,
+				360E55382428CB4A00F40C23 /* Taxi King.app */,
 				360E554E2428CB4C00F40C23 /* TaxiKingTests.xctest */,
 				360E55592428CB4C00F40C23 /* TaxiKingUITests.xctest */,
 			);
@@ -102,9 +144,15 @@
 				360E553B2428CB4B00F40C23 /* AppDelegate.swift */,
 				360E553D2428CB4B00F40C23 /* SceneDelegate.swift */,
 				360E553F2428CB4B00F40C23 /* ViewController.swift */,
+				36DC5752242921CA0002CE0E /* AddInfoViewController.swift */,
 				360E55412428CB4B00F40C23 /* Main.storyboard */,
+				3634407C242914260053A140 /* CustomTextField.swift */,
+				36DC574824291D720002CE0E /* CustomLoader.swift */,
+				36DC574924291D720002CE0E /* UIImage+Gif.swift */,
 				360E55442428CB4C00F40C23 /* Assets.xcassets */,
 				360E55462428CB4C00F40C23 /* LaunchScreen.storyboard */,
+				367BE99D2428CD4200BC1F0E /* GoogleService-Info.plist */,
+				36DC575024291F3C0002CE0E /* loader.gif */,
 				360E55492428CB4C00F40C23 /* Info.plist */,
 			);
 			path = TaxiKing;
@@ -128,6 +176,16 @@
 			path = TaxiKingUITests;
 			sourceTree = "<group>";
 		};
+		F85A55CA6FD25606BF470E92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D150F531A3FE9BB61C5E0C69 /* libPods-TaxiKing.a */,
+				30FD0C53E117CCE0D0DDD9C6 /* libPods-TaxiKing-TaxiKingUITests.a */,
+				38C007DF98AA081E27FD1B83 /* libPods-TaxiKingTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 360E55622428CB4C00F40C23 /* Build configuration list for PBXNativeTarget "TaxiKing" */;
 			buildPhases = (
+				C92D193CF063DAA04CBCA86A /* [CP] Check Pods Manifest.lock */,
 				360E55342428CB4A00F40C23 /* Sources */,
 				360E55352428CB4A00F40C23 /* Frameworks */,
 				360E55362428CB4A00F40C23 /* Resources */,
@@ -145,13 +204,14 @@
 			);
 			name = TaxiKing;
 			productName = TaxiKing;
-			productReference = 360E55382428CB4A00F40C23 /* TaxiKing.app */;
+			productReference = 360E55382428CB4A00F40C23 /* Taxi King.app */;
 			productType = "com.apple.product-type.application";
 		};
 		360E554D2428CB4C00F40C23 /* TaxiKingTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 360E55652428CB4C00F40C23 /* Build configuration list for PBXNativeTarget "TaxiKingTests" */;
 			buildPhases = (
+				1C79E8D23BAECBE506FE76EE /* [CP] Check Pods Manifest.lock */,
 				360E554A2428CB4C00F40C23 /* Sources */,
 				360E554B2428CB4C00F40C23 /* Frameworks */,
 				360E554C2428CB4C00F40C23 /* Resources */,
@@ -170,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 360E55682428CB4C00F40C23 /* Build configuration list for PBXNativeTarget "TaxiKingUITests" */;
 			buildPhases = (
+				C5E1D624BD1DD06AB394269D /* [CP] Check Pods Manifest.lock */,
 				360E55552428CB4C00F40C23 /* Sources */,
 				360E55562428CB4C00F40C23 /* Frameworks */,
 				360E55572428CB4C00F40C23 /* Resources */,
@@ -233,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				360E55482428CB4C00F40C23 /* LaunchScreen.storyboard in Resources */,
+				367BE99E2428CD4200BC1F0E /* GoogleService-Info.plist in Resources */,
 				360E55452428CB4C00F40C23 /* Assets.xcassets in Resources */,
+				36DC575124291F3C0002CE0E /* loader.gif in Resources */,
 				360E55432428CB4B00F40C23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +317,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C79E8D23BAECBE506FE76EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxiKingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5E1D624BD1DD06AB394269D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxiKing-TaxiKingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C92D193CF063DAA04CBCA86A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaxiKing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		360E55342428CB4A00F40C23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DC574B24291D720002CE0E /* UIImage+Gif.swift in Sources */,
+				3634407D242914260053A140 /* CustomTextField.swift in Sources */,
+				36DC574A24291D720002CE0E /* CustomLoader.swift in Sources */,
 				360E55402428CB4B00F40C23 /* ViewController.swift in Sources */,
 				360E553C2428CB4B00F40C23 /* AppDelegate.swift in Sources */,
 				360E553E2428CB4B00F40C23 /* SceneDelegate.swift in Sources */,
+				36DC5753242921CA0002CE0E /* AddInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +568,7 @@
 		};
 		360E55632428CB4C00F40C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4553A7E7A03919686D7B8656 /* Pods-TaxiKing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,7 +579,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayy.TaxiKing;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Taxi King";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,6 +587,7 @@
 		};
 		360E55642428CB4C00F40C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8273DD9F4F455DCE992F96E4 /* Pods-TaxiKing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,7 +598,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayy.TaxiKing;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Taxi King";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +606,7 @@
 		};
 		360E55662428CB4C00F40C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6E8CA780BE2CEA21F88130 /* Pods-TaxiKingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +629,7 @@
 		};
 		360E55672428CB4C00F40C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3096597F547C2E44EFCE86ED /* Pods-TaxiKingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +652,7 @@
 		};
 		360E55692428CB4C00F40C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C0DF175628D139B35D4796D /* Pods-TaxiKing-TaxiKingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +673,7 @@
 		};
 		360E556A2428CB4C00F40C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76362508420A9063F8CFDC7D /* Pods-TaxiKing-TaxiKingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
