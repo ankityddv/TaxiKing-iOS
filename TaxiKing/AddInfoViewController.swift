@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class AddInfoViewController: UIViewController {
+    
+    var ref:DatabaseReference?
+    var selectedImage: UIImage?
 
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -16,10 +20,59 @@ class AddInfoViewController: UIViewController {
     @IBOutlet weak var mobileField: CustomTextField!
     @IBOutlet weak var continueBttn: UIButton!
     @IBAction func continueBttn(_ sender: Any) {
+        updateData()
+        updateProfileImage()
+    }
+    
+    @objc func openImagePicker(_ sender:Any) {
+        // Open Image Picker
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    func updateProfileImage(){
+        
+        let storageRef = Storage.storage().reference().child("user/profile_images")
+        let profileImg = self.selectedImage
+        
+        guard let imageData = profileImg?.jpegData(compressionQuality: 0.2) else { return }
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let ImageRef = storageRef.child("\(uid).png")
+        let uploadTask = ImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                return
+            }
+            let size = metadata.size
+            ImageRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    return
+                }
+            }
+        }
+    }
+    func updateData() {
+        self.ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        if self.mobileField.text != "" && self.nameField.text != ""
+        {
+            self.ref?.child("USER").child(uid).setValue(["Name" : self.nameField.text ,"Phone" : self.mobileField.text])
+        }
+        else
+        {
+            print("error")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
+        profileImage.isUserInteractionEnabled = true
+        profileImage.addGestureRecognizer(imageTap)
+        profileImage.layer.cornerRadius = 75
+        profileImage.clipsToBounds = true
         // Adding shadow to uiview
         myView.layer.cornerRadius = 9
         myView.layer.shadowColor = UIColor.lightGray.cgColor
@@ -63,4 +116,14 @@ class AddInfoViewController: UIViewController {
         myView.frame.origin.y = 186
     }
 
+}
+
+extension AddInfoViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            selectedImage = image
+            profileImage.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
