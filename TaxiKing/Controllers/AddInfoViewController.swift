@@ -22,7 +22,9 @@ class AddInfoViewController: UIViewController {
     @IBAction func continueBttn(_ sender: Any) {
         updateData()
         updateProfileImage()
+        self.performSegue(withIdentifier: "Got_to_Home", sender: nil)
     }
+    
     
     @objc func openImagePicker(_ sender:Any) {
         // Open Image Picker

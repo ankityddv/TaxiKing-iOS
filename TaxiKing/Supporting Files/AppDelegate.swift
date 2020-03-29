@@ -33,6 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if shortcutItem.type == "com.ayy.TaxiKing.offeraride"{
+            // Go to VC
+        }
+        else if shortcutItem.type == "com.ayy.TaxiKing.bookaride"{
+            
+        }
+    }
 
 
 }

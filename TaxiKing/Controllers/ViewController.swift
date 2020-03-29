@@ -15,24 +15,44 @@ class ViewController: UIViewController {
     var userEmail : String?
     
     @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var myView2: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var continuebttn: UIButton!
     @IBOutlet weak var emailField: CustomTextField!
     @IBOutlet weak var passwordFiled: CustomTextField!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var forgotpasswordBttn: UIButton!
     
     @IBAction func signUp(_ sender: Any) {
         createUser()
+        
+        //Heptic touch
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set Up Heptic touch quick actions
+        let firstIcon = UIApplicationShortcutIcon(type: UIApplicationShortcutIcon.IconType.search)
+        let firstItem = UIApplicationShortcutItem(type: "jhcbjh", localizedTitle: "Book a ride", localizedSubtitle: nil, icon: firstIcon, userInfo: nil)
+        let secondIcon = UIApplicationShortcutIcon(type: UIApplicationShortcutIcon.IconType.love)
+        let secondItem = UIApplicationShortcutItem(type: "jhcbjh", localizedTitle: "Offer a ride", localizedSubtitle: nil, icon: secondIcon, userInfo: nil)
+        
+        UIApplication.shared.shortcutItems = [firstItem,secondItem]
+        
+        //Shape the buttons
         continuebttn.layer.cornerRadius = 10
+        myView2.layer.cornerRadius = 9
+        
         // Adding shadow to uiview
         myView.layer.cornerRadius = 9
         myView.layer.shadowColor = UIColor.lightGray.cgColor
         myView.layer.shadowOpacity = 0.4
         myView.layer.shadowOffset = .zero
         myView.layer.shadowRadius = 40
+        
         //Hide Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -48,6 +68,10 @@ class ViewController: UIViewController {
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
+            
+            //heptic error
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
         }
         else{
             Auth.auth().createUser(withEmail: email, password: password){ (user, error) in
@@ -67,7 +91,7 @@ class ViewController: UIViewController {
     }
     
     func loader(){
-        CustomLoader.instance.gifName = "loader"
+        CustomLoader.instance.gifName = "ripple"
         CustomLoader.instance.showLoaderView()
     }
 
@@ -84,8 +108,15 @@ class ViewController: UIViewController {
     }
     
     @objc func keyboardwilchange(notification: Notification){
+        self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 218)
+        self.myView.frame = CGRect(x: 16, y: 70, width: 383, height: 501)
+        self.myView2.frame = CGRect(x: 0, y: 0, width: 383, height: 218)
         textLabel.text = "Sign Up"
-        myView.frame.origin.y = -42
+        emailField.frame.origin.y = 241
+        passwordFiled.frame.origin.y = 309
+        continuebttn.frame.origin.y = 387
+        forgotpasswordBttn.frame.origin.y = 457
+        imageView.image = UIImage(named: "Bgw")
     }
     
     //UITextFieldDeligate Methods
@@ -97,13 +128,20 @@ class ViewController: UIViewController {
     //Hide when touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        textLabel.text = "Sign Up with email and phone number"
-        myView.frame.origin.y = 128
+        self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 307)
+        self.myView.frame = CGRect(x: 16, y: 128, width: 383, height: 590)
+        self.myView2.frame = CGRect(x: 0, y: 0, width: 383, height: 307)
+        textLabel.text = "Sign Up with email and password"
+        imageView.image = UIImage(named: "Bg")
+        emailField.frame.origin.y = 336
+        passwordFiled.frame.origin.y = 404
+        continuebttn.frame.origin.y = 502
+        forgotpasswordBttn.frame.origin.y = 464
     }
     
     override var prefersStatusBarHidden: Bool
         {
-        return true
+        return false
     }
 
 }
