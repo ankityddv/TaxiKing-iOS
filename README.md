@@ -2,7 +2,7 @@
 
 Taxi King for iOS is a cab pool app written in Swift 5 using Firebase.
 
-Taxi King allows to send and receive text messages.
+Taxi King allows to book ride, offer rides, send and receive text messages.
 
 <h3 align="center">
 <img src="image1.png" alt="Screenshot of Taxi King for iOS" />
