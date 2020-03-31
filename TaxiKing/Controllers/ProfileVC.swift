@@ -13,6 +13,15 @@ class ProfileVC: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logOutBttn: UIButton!
+    @IBAction func logOutBttn(_ sender: Any) {
+        do {
+                    try  Auth.auth().signOut()
+                   performSegue(withIdentifier: "goToWelcome", sender: self)
+                  } catch let signOutError as NSError {
+                    print ("Error signing out: %@", signOutError)
+                  }
+    }
     
     func fetchAllDetails () {
             self.fetchName()

@@ -13,6 +13,13 @@ class ViewController: UIViewController {
 
     var ref : DatabaseReference?
     var userEmail : String?
+    @IBAction func skipBttn(_ sender: Any) {
+        if(IsLoggedIn()){
+            performSegue(withIdentifier: "goToHome", sender: sender)
+        }else{
+            performSegue(withIdentifier: "goToLogin", sender: sender)
+        }
+    }
     
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var myView2: UIView!
@@ -90,13 +97,32 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK:- MAKE A CUSTOM LAODER FUNCTION
     func loader(){
-        CustomLoader.instance.gifName = "ripple"
+        CustomLoader.instance.gifName = "loader"
         CustomLoader.instance.showLoaderView()
     }
-
+    
+    // MARK:-  CHECK USER LOGGED IN
+    func IsLoggedIn() -> Bool {
+           //cheking if login details are in user defaults
+           if Auth.auth().currentUser != nil
+           {
+             print(Auth.auth().currentUser?.email as Any)
+             self.performSegue(withIdentifier: "goToHome", sender: nil)
+             return true
+           }
+           else
+           {
+             return false
+           }
+    }
+    func switchScreen() {
+       let vc = storyboard?.instantiateViewController(withIdentifier: "mvc1") as! mvc1
+       self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Code below this is for hiding keyboard
-
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)

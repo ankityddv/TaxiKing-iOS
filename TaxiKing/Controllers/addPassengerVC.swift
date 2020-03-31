@@ -63,7 +63,7 @@ class addPassengerVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! mvc1
-        vc.passengers = self.passengeNum
+        //vc.passengers = self.passengeNum
     }
 
 }

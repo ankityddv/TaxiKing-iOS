@@ -1,0 +1,6 @@
+module Pods_TaxiKing {
+  umbrella header "Pods-TaxiKing-umbrella.h"
+
+  export *
+  module * { export * }
+}

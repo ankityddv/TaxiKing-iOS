@@ -59,9 +59,10 @@ class SignInVC: UIViewController {
     }
     
     func loader(){
-        CustomLoader.instance.gifName = "ripple"
+        CustomLoader.instance.gifName = "loader"
         CustomLoader.instance.showLoaderView()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

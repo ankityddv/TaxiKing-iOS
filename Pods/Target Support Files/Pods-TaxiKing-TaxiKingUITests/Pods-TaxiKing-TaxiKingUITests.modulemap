@@ -1,0 +1,6 @@
+module Pods_TaxiKing_TaxiKingUITests {
+  umbrella header "Pods-TaxiKing-TaxiKingUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

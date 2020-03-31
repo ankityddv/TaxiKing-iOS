@@ -15,9 +15,13 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     var goingPicker: UIPickerView!
     var passengers = "1"
     
+    var toolBar = UIToolbar()
+    var passengerPicker  = UIPickerView()
+    
     let placearr1 = ["VIT Vellore","VIT Chennai","Chennai Airport","Bangalore Airport","Vellore Railway Station","Chennai Railway Station"]
     let placearr2 = ["VIT Vellore","VIT Chennai","Chennai Airport","Bangalore Airport","Vellore Railway Station","Chennai Railway Station"]
-
+    let passengerArr = ["1","2","3","4"]
+    
     @IBOutlet weak var leavingFromField: CustomTextField!
     @IBOutlet weak var goingToField: CustomTextField!
     @IBOutlet weak var calanderBttn: UIButton!
@@ -25,9 +29,35 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var searchBttn: UIButton!
     @IBOutlet weak var doneBttn: UIButton!
     @IBAction func searchBttn(_ sender: Any) {
+        self.performSegue(withIdentifier: "search_perfoemed", sender: self)
+    }
+    //MARK:-  SET UP PASSENGER PICKER
+    @IBAction func selectPassenger(_ sender: Any) {
+        passengerPicker = UIPickerView.init()
+        passengerPicker.delegate = self
+        passengerPicker.backgroundColor = UIColor.white
+        passengerPicker.setValue(UIColor.black, forKey: "textColor")
+        passengerPicker.autoresizingMask = .flexibleWidth
+        passengerPicker.contentMode = .center
+        passengerPicker.frame = CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 300)
+        self.view.addSubview(passengerPicker)
+
+        toolBar = UIToolbar.init(frame: CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 50))
+        toolBar.barStyle = .black
+        toolBar.items = [UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(onDoneButtonTapped))]
+        self.view.addSubview(toolBar)
         
+        // Heptic Feedback
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.prepare()
+        generator.impactOccurred()
     }
     
+    @objc func onDoneButtonTapped() {
+        toolBar.removeFromSuperview()
+        passengerPicker.removeFromSuperview()
+    }
+    //MARK:- SET UP CALENDER PICKER
     @IBAction func calanderOpen(_ sender: Any) {
         // set up date picker
         datepicker.datePickerMode = UIDatePicker.Mode.date
@@ -35,6 +65,7 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         let _ : CGSize = datepicker.sizeThatFits(CGSize.zero)
         datepicker.frame = CGRect(x:0.0, y:528, width:414, height:216)
         self.view.addSubview(datepicker)
+        
         
         // Show done Bttn and picker
         doneBttn.isHidden = false
@@ -51,10 +82,16 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         doneBttn.isHidden = true
     }
     
-    // For setting up picker View
+    
+    
+    
+    // MARK:- For setting up picker View
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView == self.leavingPicker {
         return 1
+        }
+        else if pickerView == self.goingPicker {
+            return 1
         }
         else{
             return 1
@@ -65,8 +102,11 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         if pickerView == self.leavingPicker {
         return placearr1[row]
         }
-        else{
+        else if pickerView == self.goingPicker{
             return placearr2[row]
+        }
+        else{
+            return passengerArr[row]
         }
     }
     
@@ -74,8 +114,11 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         if pickerView == self.leavingPicker {
         return placearr1.count
         }
-        else{
+        else if pickerView == self.goingPicker{
             return placearr2.count
+        }
+        else{
+            return passengerArr.count
         }
     }
     
@@ -83,8 +126,11 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         if pickerView == self.leavingPicker {
         leavingFromField.text = placearr1[row]
         }
-        else{
+        else if pickerView == self.goingPicker{
             goingToField.text = placearr2[row]
+        }
+        else{
+            passengersBttn.setTitle(passengerArr[row] + " passenger", for: .normal)
         }
     }
     
@@ -100,10 +146,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         super.viewDidLoad()
         dueDateChanged(sender: datepicker)
         doneBttn.isHidden = true
-        
-        //set passenger button
-        let numOfPassengers = passengers + " passengers"
-        passengersBttn.setTitle(numOfPassengers, for: .normal)
         
         //to delete the line in the navBar
         self.tabBarController?.tabBar.layer.zPosition = -1
@@ -121,6 +163,10 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         leavingPicker?.delegate = self
         goingPicker?.dataSource = self
         goingPicker?.delegate = self
+        
+        leavingPicker.backgroundColor = UIColor.white
+        goingPicker.backgroundColor = UIColor.white
+        
         
         //Hide Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -175,5 +221,7 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
            {
            return false
        }
+    
+    
 
 }
