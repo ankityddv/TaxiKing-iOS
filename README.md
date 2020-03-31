@@ -33,6 +33,6 @@ Taxi King for iOS is compatible with iOS 13.0+.
 
 ## License
 
-Copyright 2019 Ankit Yadav.
+Copyright 2020 Ankit Yadav.
 
 Licensed under MIT License: https://opensource.org/licenses/MIT
