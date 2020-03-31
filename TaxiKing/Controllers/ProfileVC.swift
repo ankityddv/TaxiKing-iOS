@@ -15,6 +15,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var logOutBttn: UIButton!
     @IBAction func logOutBttn(_ sender: Any) {
+        
         do {
                     try  Auth.auth().signOut()
                    performSegue(withIdentifier: "goToWelcome", sender: self)
@@ -60,11 +61,11 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = 100
-        profileImage.layer.shadowColor = UIColor.lightGray.cgColor
-        profileImage.layer.shadowOpacity = 0.4
-        profileImage.layer.shadowOffset = .zero
-        profileImage.layer.shadowRadius = 20
+        //profileImage.layer.cornerRadius = 100
+        //profileImage.layer.shadowColor = UIColor.lightGray.cgColor
+        //profileImage.layer.shadowOpacity = 0.4
+        //profileImage.layer.shadowOffset = .zero
+        //profileImage.layer.shadowRadius = 20
         
         fetchAllDetails()
     }

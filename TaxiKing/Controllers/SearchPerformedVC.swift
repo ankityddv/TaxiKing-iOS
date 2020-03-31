@@ -37,9 +37,17 @@ class SearchPerformedVC: UIViewController,UITableViewDelegate,UITableViewDataSou
         return cell
     }
     
-    //func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    var Messagecontroller: mvc1?
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)  {
         
-    //}
+        self.dismiss(animated: true) {
+            print("Dismissed")
+            self.Messagecontroller?.showChatController()
+            
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 189

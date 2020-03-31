@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
+    
+    var mainController: mvc1?
 
     var ref : DatabaseReference?
     var userEmail : String?
@@ -117,6 +119,9 @@ class ViewController: UIViewController {
              return false
            }
     }
+
+    
+    
     func switchScreen() {
        let vc = storyboard?.instantiateViewController(withIdentifier: "mvc1") as! mvc1
        self.navigationController?.pushViewController(vc, animated: true)
