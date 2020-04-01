@@ -46,8 +46,6 @@ class addPassengerVC: UIViewController {
         self.passengeNum = countNumber.text!
         performSegue(withIdentifier: "confirmed", sender: self)
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         someValue = 1
@@ -55,12 +53,10 @@ class addPassengerVC: UIViewController {
         confirmBttn.layer.cornerRadius = 22
         
     }
-    
     func setcolour(){
         minusBttn.setTitleColor(.gray, for: .normal)
         plusBttn.setTitleColor(.systemTeal, for: .normal)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! mvc1
         //vc.passengers = self.passengeNum

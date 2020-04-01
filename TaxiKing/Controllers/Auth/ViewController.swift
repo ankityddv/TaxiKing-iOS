@@ -11,18 +11,39 @@ import Firebase
 
 class ViewController: UIViewController {
     
-    var mainController: mvc1?
+    var mainController: ProfileVC?
+	var signUpController: mvc1?
 
     var ref : DatabaseReference?
-    var userEmail : String?
+	
+	
+	// MARK:-  CHECK USER LOGGED IN
     @IBAction func skipBttn(_ sender: Any) {
         if(IsLoggedIn()){
             performSegue(withIdentifier: "goToHome", sender: sender)
         }else{
-            performSegue(withIdentifier: "goToLogin", sender: sender)
+            let alertController = UIAlertController(title: "Error!", message: "Sorry you aren't logged in to app. Please login again.", preferredStyle: .alert)
+			let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+			
+			alertController.addAction(defaultAction)
+			self.present(alertController, animated: true, completion: nil)
         }
     }
+    func IsLoggedIn() -> Bool {
+           //cheking if login details are in user defaults
+           if Auth.auth().currentUser != nil
+           {
+             print(Auth.auth().currentUser?.email as Any)
+             self.performSegue(withIdentifier: "goToHome", sender: nil)
+             return true
+           }
+           else
+           {
+             return false
+           }
+    }
     
+	
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var myView2: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -31,7 +52,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordFiled: CustomTextField!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var forgotpasswordBttn: UIButton!
-    
     @IBAction func signUp(_ sender: Any) {
         createUser()
         
@@ -40,15 +60,16 @@ class ViewController: UIViewController {
         generator.notificationOccurred(.success)
     }
     
+	
+	//Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set Up Heptic touch quick actions
+        //Set Up Heptic touch quick actions on home page
         let firstIcon = UIApplicationShortcutIcon(type: UIApplicationShortcutIcon.IconType.search)
         let firstItem = UIApplicationShortcutItem(type: "jhcbjh", localizedTitle: "Book a ride", localizedSubtitle: nil, icon: firstIcon, userInfo: nil)
         let secondIcon = UIApplicationShortcutIcon(type: UIApplicationShortcutIcon.IconType.love)
         let secondItem = UIApplicationShortcutItem(type: "jhcbjh", localizedTitle: "Offer a ride", localizedSubtitle: nil, icon: secondIcon, userInfo: nil)
-        
         UIApplication.shared.shortcutItems = [firstItem,secondItem]
         
         //Shape the buttons
@@ -68,6 +89,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
+	
+	//Function to login In the User
     func createUser(){
         let email = emailField.text!
         let password = passwordFiled.text!
@@ -99,33 +122,13 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK:- MAKE A CUSTOM LAODER FUNCTION
+	
+    //Function to start the loader
     func loader(){
         CustomLoader.instance.gifName = "loader"
         CustomLoader.instance.showLoaderView()
     }
-    
-    // MARK:-  CHECK USER LOGGED IN
-    func IsLoggedIn() -> Bool {
-           //cheking if login details are in user defaults
-           if Auth.auth().currentUser != nil
-           {
-             print(Auth.auth().currentUser?.email as Any)
-             self.performSegue(withIdentifier: "goToHome", sender: nil)
-             return true
-           }
-           else
-           {
-             return false
-           }
-    }
-
-    
-    
-    func switchScreen() {
-       let vc = storyboard?.instantiateViewController(withIdentifier: "mvc1") as! mvc1
-       self.navigationController?.pushViewController(vc, animated: true)
-    }
+	
     
     // MARK: - Code below this is for hiding keyboard
     deinit {
@@ -133,11 +136,9 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
-    
     func hideKeyboard(){
         view.resignFirstResponder()
     }
-    
     @objc func keyboardwilchange(notification: Notification){
         self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 218)
         self.myView.frame = CGRect(x: 16, y: 70, width: 383, height: 501)
@@ -149,14 +150,10 @@ class ViewController: UIViewController {
         forgotpasswordBttn.frame.origin.y = 457
         imageView.image = UIImage(named: "Bgw")
     }
-    
-    //UITextFieldDeligate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         hideKeyboard()
         return true
     }
-    
-    //Hide when touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 307)
@@ -170,10 +167,11 @@ class ViewController: UIViewController {
         forgotpasswordBttn.frame.origin.y = 464
     }
     
-    override var prefersStatusBarHidden: Bool
-        {
-        return false
-    }
+	
+	// to hide the status bar(time and battery) on top
+    override var prefersStatusBarHidden: Bool{
+	return false
+}
 
 }
 

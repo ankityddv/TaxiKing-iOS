@@ -14,6 +14,7 @@ class AddInfoViewController: UIViewController {
     var ref:DatabaseReference?
     var selectedImage: UIImage?
 
+	
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameField: CustomTextField!
@@ -25,14 +26,17 @@ class AddInfoViewController: UIViewController {
         self.performSegue(withIdentifier: "Got_to_Home", sender: nil)
     }
     
-    
+	
+	// To open imagePicker
     @objc func openImagePicker(_ sender:Any) {
         // Open Image Picker
         let pickerController = UIImagePickerController()
-        pickerController.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+		pickerController.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(pickerController, animated: true, completion: nil)
     }
     
+	
+	// To update the user details
     func updateProfileImage(){
         
         let storageRef = Storage.storage().reference().child("user/profile_images")
@@ -43,13 +47,13 @@ class AddInfoViewController: UIViewController {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let ImageRef = storageRef.child("\(uid).png")
-        let uploadTask = ImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+		_ = ImageRef.putData(imageData, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 return
             }
-            let size = metadata.size
+			_ = metadata.size
             ImageRef.downloadURL { (url, error) in
-                guard let downloadURL = url else {
+				guard url != nil else {
                     return
                 }
             }
@@ -68,6 +72,8 @@ class AddInfoViewController: UIViewController {
         }
     }
     
+	
+	// Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
@@ -75,51 +81,49 @@ class AddInfoViewController: UIViewController {
         profileImage.addGestureRecognizer(imageTap)
         profileImage.layer.cornerRadius = 75
         profileImage.clipsToBounds = true
+		
         // Adding shadow to uiview
         myView.layer.cornerRadius = 9
         myView.layer.shadowColor = UIColor.lightGray.cgColor
         myView.layer.shadowOpacity = 0.4
         myView.layer.shadowOffset = .zero
         myView.layer.shadowRadius = 40
-        //
+        
         continueBttn.layer.cornerRadius = 10
         profileImage.layer.cornerRadius = 75
+		
         //Hide Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+	
     
     // MARK: - Code below this is for hiding keyboard
-
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
-    
     func hideKeyboard(){
         view.resignFirstResponder()
     }
-    
     @objc func keyboardwilchange(notification: Notification){
         myView.frame.origin.y = 86
     }
-    
-    //UITextFieldDeligate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         hideKeyboard()
         return true
     }
-    
-    //Hide when touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         myView.frame.origin.y = 186
     }
-
+	
 }
 
+
+// Image picker Extension
 extension AddInfoViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{

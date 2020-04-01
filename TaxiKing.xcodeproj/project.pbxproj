@@ -16,7 +16,6 @@
 		360E55532428CB4C00F40C23 /* TaxiKingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E55522428CB4C00F40C23 /* TaxiKingTests.swift */; };
 		360E555E2428CB4C00F40C23 /* TaxiKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E555D2428CB4C00F40C23 /* TaxiKingUITests.swift */; };
 		363363422430B2DF003CBB11 /* addPassengerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363412430B2DF003CBB11 /* addPassengerVC.swift */; };
-		363363442430C5F0003CBB11 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363432430C5F0003CBB11 /* ProfileVC.swift */; };
 		363363512430D7DD003CBB11 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363502430D7DD003CBB11 /* CustomLoader.swift */; };
 		363363532430D7FE003CBB11 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363522430D7FE003CBB11 /* CustomTextField.swift */; };
 		363363552430D822003CBB11 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363542430D822003CBB11 /* UIImage+Gif.swift */; };
@@ -31,6 +30,9 @@
 		36C3503424308C8500680EFF /* mvc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3503324308C8500680EFF /* mvc2.swift */; };
 		36C3503824308CB500680EFF /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3503724308CB500680EFF /* MessageVC.swift */; };
 		36DC5753242921CA0002CE0E /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC5752242921CA0002CE0E /* AddInfoViewController.swift */; };
+		36F34EB52433761B001EEE91 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F34EB42433761B001EEE91 /* ProfileVC.swift */; };
+		36F34EF624338DDE001EEE91 /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F34EF524338DDE001EEE91 /* ChatsVC.swift */; };
+		36F34EFA24338FFA001EEE91 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F34EF924338FFA001EEE91 /* MessageTextField.swift */; };
 		4CCCAA2181F80BEE22248111 /* libPods-TaxiKing-TaxiKingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD0C53E117CCE0D0DDD9C6 /* libPods-TaxiKing-TaxiKingUITests.a */; };
 		5A3006E62939FC8272F7A4EE /* libPods-TaxiKingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C007DF98AA081E27FD1B83 /* libPods-TaxiKingTests.a */; };
 		D3F955371AB922F9C923C063 /* libPods-TaxiKing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D150F531A3FE9BB61C5E0C69 /* libPods-TaxiKing.a */; };
@@ -72,7 +74,6 @@
 		360E555D2428CB4C00F40C23 /* TaxiKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiKingUITests.swift; sourceTree = "<group>"; };
 		360E555F2428CB4C00F40C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		363363412430B2DF003CBB11 /* addPassengerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPassengerVC.swift; sourceTree = "<group>"; };
-		363363432430C5F0003CBB11 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		363363502430D7DD003CBB11 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		363363522430D7FE003CBB11 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		363363542430D822003CBB11 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -87,6 +88,9 @@
 		36C3503324308C8500680EFF /* mvc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc2.swift; sourceTree = "<group>"; };
 		36C3503724308CB500680EFF /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 		36DC5752242921CA0002CE0E /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		36F34EB42433761B001EEE91 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		36F34EF524338DDE001EEE91 /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
+		36F34EF924338FFA001EEE91 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		38C007DF98AA081E27FD1B83 /* libPods-TaxiKingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiKingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4553A7E7A03919686D7B8656 /* Pods-TaxiKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing.debug.xcconfig"; path = "Target Support Files/Pods-TaxiKing/Pods-TaxiKing.debug.xcconfig"; sourceTree = "<group>"; };
 		76362508420A9063F8CFDC7D /* Pods-TaxiKing-TaxiKingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiKing-TaxiKingUITests.release.xcconfig"; path = "Target Support Files/Pods-TaxiKing-TaxiKingUITests/Pods-TaxiKing-TaxiKingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			children = (
 				363363502430D7DD003CBB11 /* CustomLoader.swift */,
 				363363522430D7FE003CBB11 /* CustomTextField.swift */,
+				36F34EF924338FFA001EEE91 /* MessageTextField.swift */,
 				363363542430D822003CBB11 /* UIImage+Gif.swift */,
 			);
 			path = "Custom Files";
@@ -240,18 +245,43 @@
 		36C3503924308D0500680EFF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				36F34EF2243385C0001EEE91 /* Auth */,
+				36F34EF3243385CF001EEE91 /* Main Controllers */,
+				36F34EF4243385EB001EEE91 /* Others VCS */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36F34EF2243385C0001EEE91 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
 				360E553F2428CB4B00F40C23 /* ViewController.swift */,
-				36DC5752242921CA0002CE0E /* AddInfoViewController.swift */,
 				36BFA85324306ADD002C3B1F /* SignInVC.swift */,
+				36DC5752242921CA0002CE0E /* AddInfoViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		36F34EF3243385CF001EEE91 /* Main Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				36C3503124308C6900680EFF /* mvc1.swift */,
 				36C3503324308C8500680EFF /* mvc2.swift */,
 				364C42EC2431DCE50059EFCA /* mvc3.swift */,
-				363363432430C5F0003CBB11 /* ProfileVC.swift */,
+				36F34EB42433761B001EEE91 /* ProfileVC.swift */,
+			);
+			path = "Main Controllers";
+			sourceTree = "<group>";
+		};
+		36F34EF4243385EB001EEE91 /* Others VCS */ = {
+			isa = PBXGroup;
+			children = (
 				36C3503724308CB500680EFF /* MessageVC.swift */,
+				36F34EF524338DDE001EEE91 /* ChatsVC.swift */,
 				363363412430B2DF003CBB11 /* addPassengerVC.swift */,
 				363CAE3B2433225500DB45F9 /* SearchPerformedVC.swift */,
 			);
-			path = Controllers;
+			path = "Others VCS";
 			sourceTree = "<group>";
 		};
 		F85A55CA6FD25606BF470E92 /* Frameworks */ = {
@@ -473,16 +503,18 @@
 				36BFA85424306ADD002C3B1F /* SignInVC.swift in Sources */,
 				364C42ED2431DCE50059EFCA /* mvc3.swift in Sources */,
 				36C3503424308C8500680EFF /* mvc2.swift in Sources */,
+				36F34EFA24338FFA001EEE91 /* MessageTextField.swift in Sources */,
 				363363512430D7DD003CBB11 /* CustomLoader.swift in Sources */,
 				363CAE3C2433225500DB45F9 /* SearchPerformedVC.swift in Sources */,
+				36F34EF624338DDE001EEE91 /* ChatsVC.swift in Sources */,
 				363363552430D822003CBB11 /* UIImage+Gif.swift in Sources */,
 				36C3503824308CB500680EFF /* MessageVC.swift in Sources */,
 				363CAE3E24332B0200DB45F9 /* YourRidesTableViewCell.swift in Sources */,
 				36C3503224308C6900680EFF /* mvc1.swift in Sources */,
-				363363442430C5F0003CBB11 /* ProfileVC.swift in Sources */,
 				360E55402428CB4B00F40C23 /* ViewController.swift in Sources */,
 				363363532430D7FE003CBB11 /* CustomTextField.swift in Sources */,
 				360E553C2428CB4B00F40C23 /* AppDelegate.swift in Sources */,
+				36F34EB52433761B001EEE91 /* ProfileVC.swift in Sources */,
 				363CAE3A24331FF600DB45F9 /* searchedTableViewCell.swift in Sources */,
 				360E553E2428CB4B00F40C23 /* SceneDelegate.swift in Sources */,
 				36DC5753242921CA0002CE0E /* AddInfoViewController.swift in Sources */,

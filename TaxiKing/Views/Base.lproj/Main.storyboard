@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p0P-HB-NCj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMW-aS-Fbz">
@@ -138,7 +138,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="g2X-Qn-fzy" customClass="SignInVC" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRi-kt-PUA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLi-iu-omx">
@@ -419,7 +419,7 @@
                                 <rect key="frame" x="302" y="6" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-Qf-4QC">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sent" translatesAutoresizingMaskIntoConstraints="NO" id="F2c-Qf-4QC">
                                         <rect key="frame" x="62" y="7.5" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -528,6 +528,49 @@
             </objects>
             <point key="canvasLocation" x="4892.753623188406" y="-457.36607142857139"/>
         </scene>
+        <!--ChatsVC-->
+        <scene sceneID="g2g-cU-ohP">
+            <objects>
+                <viewController id="a7d-hp-fRQ" customClass="ChatsVC" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxD-OZ-tjY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-8d-dOZ">
+                                <rect key="frame" x="0.0" y="811" width="414" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-bh-3vU" customClass="MessageTextField" customModule="Taxi_King" customModuleProvider="target">
+                                <rect key="frame" x="111" y="769" width="243" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWid">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5E-BQ-aYF">
+                                <rect key="frame" x="368" y="771" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="up"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AhK-7f-H9p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jrE-ap-kF4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-LM-Xea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5705.7971014492759" y="-457.36607142857139"/>
+        </scene>
         <!--Add passengers-->
         <scene sceneID="kq5-08-HJB">
             <objects>
@@ -592,48 +635,6 @@
             </objects>
             <point key="canvasLocation" x="2206" y="-1199"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="2qH-cU-0dw">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="MMq-fd-5j1" customClass="ProfileVC" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hHB-R1-trO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-vY-I7x">
-                                <rect key="frame" x="107" y="148" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qy1-XP-K9Q">
-                                <rect key="frame" x="26" y="383" width="363" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
-                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-PB-XyJ">
-                                <rect key="frame" x="148" y="586" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOutBttn:" destination="MMq-fd-5j1" eventType="touchUpInside" id="9gw-vr-Qys"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ZrX-d6-b3v"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Profile" id="UEP-OS-4ft"/>
-                    <connections>
-                        <outlet property="logOutBttn" destination="8O3-PB-XyJ" id="vCh-8o-Yey"/>
-                        <outlet property="nameLabel" destination="qy1-XP-K9Q" id="jJd-EJ-qWp"/>
-                        <outlet property="profileImage" destination="9dp-vY-I7x" id="bqJ-A1-TMT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xMh-8q-6CH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2998.5507246376815" y="-1198.6607142857142"/>
-        </scene>
         <!--Messages-->
         <scene sceneID="dEe-4s-eGn">
             <objects>
@@ -648,14 +649,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qg5-Sg-7Xy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4893" y="-1199"/>
+            <point key="canvasLocation" x="4893" y="-1212"/>
         </scene>
         <!--Add a ride-->
         <scene sceneID="cmO-T1-17d">
             <objects>
                 <viewController id="b98-Wc-kiW" customClass="mvc2" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byM-6k-UME">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QVU-9f-zEG"/>
@@ -663,9 +664,6 @@
                     <navigationItem key="navigationItem" title="Add a ride" id="Lko-qp-B3w">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="person" catalog="system" id="2R4-Wj-SRv">
                             <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="MMq-fd-5j1" kind="show" id="UvM-Fd-zLq"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="message" catalog="system" id="G13-gV-a4F">
                             <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -741,9 +739,6 @@
                     <navigationItem key="navigationItem" title="Your Rides" id="szV-Nd-h64">
                         <barButtonItem key="leftBarButtonItem" image="person" catalog="system" id="yJ1-58-5aZ">
                             <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="MMq-fd-5j1" kind="show" id="pYF-kx-IV3"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="message" catalog="system" id="sfL-nD-LoG">
                             <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -789,6 +784,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -796,11 +792,12 @@
                         <segue destination="iy8-cc-z80" kind="relationship" relationship="viewControllers" id="Bzc-8b-ETt"/>
                         <segue destination="jrS-KL-t4x" kind="relationship" relationship="viewControllers" id="kOj-Ln-GYE"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="signUp" id="MUc-ji-eTA"/>
+                        <segue destination="D0K-ng-hnB" kind="relationship" relationship="viewControllers" id="fEQ-Ey-XvN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4y-x4-u8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="119"/>
+            <point key="canvasLocation" x="2141" y="2425"/>
         </scene>
         <!--Add a ride-->
         <scene sceneID="fym-y0-KZ6">
@@ -809,7 +806,7 @@
                     <tabBarItem key="tabBarItem" title="Add a ride" image="plus.circle" catalog="system" id="dGT-0F-Fi5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="geT-fh-Lxn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.14117647059999999" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -846,23 +843,86 @@
             </objects>
             <point key="canvasLocation" x="2998.5507246376815" y="1660.7142857142856"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="4eV-4D-8LY">
+            <objects>
+                <viewController id="uvY-WF-kZc" customClass="ProfileVC" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xF-mB-U80">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KY4-VQ-d5p">
+                                <rect key="frame" x="107" y="150" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ah-ij-Eg2">
+                                <rect key="frame" x="123" y="411" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-Ei-mCI">
+                                <rect key="frame" x="183" y="552" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBttn:" destination="uvY-WF-kZc" eventType="touchUpInside" id="Shm-Fn-PW6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rwh-bS-j6h"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="G4R-qq-0hu"/>
+                    <connections>
+                        <outlet property="logOutBttn" destination="FDe-Ei-mCI" id="S1D-XY-qxz"/>
+                        <outlet property="nameLabel" destination="1ah-ij-Eg2" id="qqf-2J-doe"/>
+                        <outlet property="profileImageView" destination="KY4-VQ-d5p" id="OkA-Sh-kCl"/>
+                        <segue destination="g2X-Qn-fzy" kind="show" identifier="signedOut" id="Evp-C5-hbq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8c-hh-58a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908.6956521739135" y="3129.9107142857142"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="AQU-xe-Tal">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D0K-ng-hnB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="4En-Lx-eVP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gQ2-zm-qfa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uvY-WF-kZc" kind="relationship" relationship="rootViewController" id="RkQ-mk-xiu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9T-Ke-LIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2839" y="3130"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bg" width="1149" height="921"/>
         <image name="Bg2" width="1242" height="783"/>
         <image name="car" catalog="system" width="64" height="46"/>
-        <image name="dp" width="2048" height="2048"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="message" catalog="system" width="64" height="56"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="plus.circle" catalog="system" width="64" height="60"/>
+        <image name="sent" width="50" height="50"/>
+        <image name="up" width="64" height="64"/>
         <image name="user" width="480" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0gb-c8-ksa"/>
+        <segue reference="mTX-xN-RNQ"/>
         <segue reference="cWg-1P-vR6"/>
-        <segue reference="UvM-Fd-zLq"/>
-        <segue reference="MUc-ji-eTA"/>
+        <segue reference="Evp-C5-hbq"/>
+        <segue reference="lMQ-u3-e91"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

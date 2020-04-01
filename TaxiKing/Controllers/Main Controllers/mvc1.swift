@@ -10,19 +10,28 @@ import UIKit
 import Firebase
 
 class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    
+
+	// Fold by cmd + option + shift + left
+	
+	// For all pickers
     let datepicker : UIDatePicker = UIDatePicker()
     var leavingPicker: UIPickerView!
     var goingPicker: UIPickerView!
     var passengers = "1"
+	
     
+	//For passenger Picker
     var toolBar = UIToolbar()
     var passengerPicker  = UIPickerView()
     
+	
+	// Arrays of the database
     let placearr1 = ["VIT Vellore","VIT Chennai","Chennai Airport","Bangalore Airport","Vellore Railway Station","Chennai Railway Station"]
     let placearr2 = ["VIT Vellore","VIT Chennai","Chennai Airport","Bangalore Airport","Vellore Railway Station","Chennai Railway Station"]
     let passengerArr = ["1","2","3","4"]
     
+	
+	// Declaring all the components
     @IBOutlet weak var personView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var messageView: UIView!
@@ -37,7 +46,9 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBAction func searchBttn(_ sender: Any) {
         self.performSegue(withIdentifier: "search_perfoemed", sender: self)
     }
-    //MARK:-  SET UP PASSENGER PICKER
+	
+	
+    //MARK:- Set up passenger picker
     @IBAction func selectPassenger(_ sender: Any) {
         passengerPicker = UIPickerView.init()
         passengerPicker.delegate = self
@@ -58,12 +69,13 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         generator.prepare()
         generator.impactOccurred()
     }
-    
     @objc func onDoneButtonTapped() {
         toolBar.removeFromSuperview()
         passengerPicker.removeFromSuperview()
     }
-    //MARK:- SET UP CALENDER PICKER
+	
+	
+    //MARK:- Set up calander picker
     @IBAction func calanderOpen(_ sender: Any) {
         // set up date picker
         datepicker.datePickerMode = UIDatePicker.Mode.date
@@ -82,16 +94,13 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         generator.prepare()
         generator.impactOccurred()
     }
-    
     @IBAction func doneBttn(_ sender: Any) {
         datepicker.isHidden = true
         doneBttn.isHidden = true
     }
     
-     
     
-    
-    // MARK:- For setting up picker View
+    // MARK:- For setting up leaving, going and passenger picker View
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView == self.leavingPicker {
         return 1
@@ -103,7 +112,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             return 1
         }
     }
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == self.leavingPicker {
         return placearr1[row]
@@ -115,7 +123,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             return passengerArr[row]
         }
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == self.leavingPicker {
         return placearr1.count
@@ -127,7 +134,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             return passengerArr.count
         }
     }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == self.leavingPicker {
         leavingFromField.text = placearr1[row]
@@ -140,7 +146,8 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         }
     }
     
-    // func for formatting and printing date
+	
+    //MARK:- func for formatting and printing date
     @objc func dueDateChanged(sender:UIDatePicker){
         let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
@@ -148,6 +155,8 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         calanderBttn.setTitle(dateFormatter.string(from: sender.date), for: .normal)
     }
     
+	
+	//MARK:- Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchProfileImage()
@@ -183,23 +192,25 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         
         
         //messageBttn.action = #selector(showChatController)
-        tapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatController)))
+        //tapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatController)))
         messageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatController)))
-        personView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showProfileController)))
+        //personView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showProfileController)))
     }
     
+	
+	//MARK:- Top Bar button functions
     @objc func showChatController(){
         let chatController = MessageVC(collectionViewLayout: UICollectionViewFlowLayout())
         chatController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(chatController, animated: true)
     }
+    //@objc func showProfileController(){
+      //  let profileController = ProfileVC()
+        //profileController.hidesBottomBarWhenPushed = true
+        //self.navigationController?.pushViewController(profileController, animated: true)
+    //}
     
-    @objc func showProfileController(){
-        let profileController = ProfileVC()
-        profileController.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(profileController, animated: true)
-    }
-    
+	
     // LOAD PROFILE IMAGE IN BAR BUTTON
     func fetchProfileImage(){
         //retrive image
@@ -216,8 +227,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             }
         }
     }
-    
-    
     func checkIfUserIsLoggedIn() {
         if Auth.auth().currentUser?.uid == nil {
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
@@ -290,7 +299,6 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             
             //self.navigationItem.titleView = button
         }
-    
     @objc func handleLogout() {
         
         do {
@@ -299,58 +307,35 @@ class mvc1: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             print(logoutError)
         }
         let loginController = ViewController()
-        loginController.mainController = self
+        loginController.signUpController = self
         present(loginController, animated: true, completion: nil)
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // MARK: - Code below this is for hiding keyboard
-
-       deinit {
-           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-           NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-       }
+	deinit {
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+	}
+	func hideKeyboard(){
+		view.resignFirstResponder()
+	}
+	@objc func keyboardwilchange(notification: Notification){
+	}
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		hideKeyboard()
+		return true
+	}
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
        
-       func hideKeyboard(){
-           view.resignFirstResponder()
-       }
-       
-       @objc func keyboardwilchange(notification: Notification){
-       }
-       
-       //UITextFieldDeligate Methods
-       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           hideKeyboard()
-           return true
-       }
-       
-       //Hide when touch outside keyboard
-       override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           self.view.endEditing(true)
-       }
-       
-       override var prefersStatusBarHidden: Bool
-           {
-           return false
-       }
+	
+	// to hide the status bar(time and battery) on top
+	override var prefersStatusBarHidden: Bool{
+		return false
+	}
     
     
 

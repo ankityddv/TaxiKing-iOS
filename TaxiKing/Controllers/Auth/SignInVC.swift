@@ -18,14 +18,15 @@ class SignInVC: UIViewController {
     @IBOutlet weak var signInBttn: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
-    
     @IBAction func signInBttn(_ sender: Any) {
         loginUser()
-        
+		// Heptick feedback for success
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
     }
     
+	
+	//Function to login In the User
     func loginUser() {
         let email = emailField.text!
         let password = passwordField.text!
@@ -45,6 +46,7 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil{
                     self.performSegue(withIdentifier: "signed_In", sender: nil)
+					self.loader()
                 }
                 else{
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -54,16 +56,18 @@ class SignInVC: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
-            loader()
         }
     }
-    
+	
+	
+    //Function to start the loader
     func loader(){
         CustomLoader.instance.gifName = "loader"
         CustomLoader.instance.showLoaderView()
     }
     
-    
+	
+	//Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()
             signInBttn.layer.cornerRadius = 10
@@ -80,18 +84,16 @@ class SignInVC: UIViewController {
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardwilchange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         }
     
+	
     // MARK: - Code below this is for hiding keyboard
-
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
-    
     func hideKeyboard(){
         view.resignFirstResponder()
     }
-    
     @objc func keyboardwilchange(notification: Notification){
         self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 218)
         self.myView.frame = CGRect(x: 16, y: 70, width: 383, height: 465)
@@ -102,14 +104,10 @@ class SignInVC: UIViewController {
         signInBttn.frame.origin.y = 387
         imageView.image = UIImage(named: "Bgw")
     }
-    
-    //UITextFieldDeligate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         hideKeyboard()
         return true
     }
-    
-    //Hide when touch outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         self.imageView.frame = CGRect(x: 0, y: 0, width: 383, height: 307)
@@ -122,6 +120,8 @@ class SignInVC: UIViewController {
         signInBttn.frame.origin.y = 502
     }
     
+	
+	// to hide the status bar(time and battery) on top
     override var prefersStatusBarHidden: Bool
         {
         return false

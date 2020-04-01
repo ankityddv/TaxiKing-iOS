@@ -10,13 +10,15 @@ import UIKit
 
 class mvc3: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+	// Array
     var fromArr = ["Delhi","LA","","","","",""]
     var toArr = ["LA","Texas","","","","",""]
     
+	
+	// User's previous rides Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fromArr.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:YourRidesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "YourRidesTableViewCell", for: indexPath) as! YourRidesTableViewCell
         cell.fromLabel.text = fromArr[indexPath.row]
@@ -29,12 +31,12 @@ class mvc3: UIViewController,UITableViewDataSource,UITableViewDelegate {
         cell.myView.layer.shadowRadius = 7
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 189
     }
-    
 
+	
+	//Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.layer.zPosition = -1
