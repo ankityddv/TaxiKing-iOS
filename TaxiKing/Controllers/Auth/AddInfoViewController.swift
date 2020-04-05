@@ -23,7 +23,7 @@ class AddInfoViewController: UIViewController {
     @IBAction func continueBttn(_ sender: Any) {
         updateData()
         updateProfileImage()
-        self.performSegue(withIdentifier: "Got_to_Home", sender: nil)
+        self.performSegue(withIdentifier: "go_To_Home", sender: nil)
     }
     
 	

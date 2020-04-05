@@ -9,8 +9,6 @@
 import UIKit
 
 class mvc2: UIViewController {
-
-	
 	// Viewdidload()
     override func viewDidLoad() {
         super.viewDidLoad()

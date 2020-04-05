@@ -56,6 +56,7 @@ class SignInVC: UIViewController {
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
+			loader()
         }
     }
 	

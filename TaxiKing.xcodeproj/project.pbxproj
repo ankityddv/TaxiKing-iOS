@@ -19,12 +19,12 @@
 		363363512430D7DD003CBB11 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363502430D7DD003CBB11 /* CustomLoader.swift */; };
 		363363532430D7FE003CBB11 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363522430D7FE003CBB11 /* CustomTextField.swift */; };
 		363363552430D822003CBB11 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363363542430D822003CBB11 /* UIImage+Gif.swift */; };
-		3633635A2430DB7B003CBB11 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 363363592430DB7B003CBB11 /* loader.gif */; };
 		363CAE3A24331FF600DB45F9 /* searchedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CAE3924331FF600DB45F9 /* searchedTableViewCell.swift */; };
 		363CAE3C2433225500DB45F9 /* SearchPerformedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CAE3B2433225500DB45F9 /* SearchPerformedVC.swift */; };
 		363CAE3E24332B0200DB45F9 /* YourRidesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363CAE3D24332B0200DB45F9 /* YourRidesTableViewCell.swift */; };
 		364C42ED2431DCE50059EFCA /* mvc3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C42EC2431DCE50059EFCA /* mvc3.swift */; };
 		367BE99E2428CD4200BC1F0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 367BE99D2428CD4200BC1F0E /* GoogleService-Info.plist */; };
+		368072552439BFFF0095A756 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = 368072542439BFFF0095A756 /* loader.gif */; };
 		36BFA85424306ADD002C3B1F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BFA85324306ADD002C3B1F /* SignInVC.swift */; };
 		36C3503224308C6900680EFF /* mvc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3503124308C6900680EFF /* mvc1.swift */; };
 		36C3503424308C8500680EFF /* mvc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3503324308C8500680EFF /* mvc2.swift */; };
@@ -77,12 +77,12 @@
 		363363502430D7DD003CBB11 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		363363522430D7FE003CBB11 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		363363542430D822003CBB11 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		363363592430DB7B003CBB11 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loader.gif; path = ../../../../Downloads/loader.gif; sourceTree = "<group>"; };
 		363CAE3924331FF600DB45F9 /* searchedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchedTableViewCell.swift; sourceTree = "<group>"; };
 		363CAE3B2433225500DB45F9 /* SearchPerformedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPerformedVC.swift; sourceTree = "<group>"; };
 		363CAE3D24332B0200DB45F9 /* YourRidesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourRidesTableViewCell.swift; sourceTree = "<group>"; };
 		364C42EC2431DCE50059EFCA /* mvc3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc3.swift; sourceTree = "<group>"; };
 		367BE99D2428CD4200BC1F0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Documents/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		368072542439BFFF0095A756 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loader.gif; path = ../../../../Downloads/loader.gif; sourceTree = "<group>"; };
 		36BFA85324306ADD002C3B1F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		36C3503124308C6900680EFF /* mvc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc1.swift; sourceTree = "<group>"; };
 		36C3503324308C8500680EFF /* mvc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc2.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		363363562430DA7B003CBB11 /* GIF */ = {
 			isa = PBXGroup;
 			children = (
-				363363592430DB7B003CBB11 /* loader.gif */,
+				368072542439BFFF0095A756 /* loader.gif */,
 			);
 			path = GIF;
 			sourceTree = "<group>";
@@ -401,9 +401,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3633635A2430DB7B003CBB11 /* loader.gif in Resources */,
 				360E55482428CB4C00F40C23 /* LaunchScreen.storyboard in Resources */,
 				367BE99E2428CD4200BC1F0E /* GoogleService-Info.plist in Resources */,
+				368072552439BFFF0095A756 /* loader.gif in Resources */,
 				360E55452428CB4C00F40C23 /* Assets.xcassets in Resources */,
 				360E55432428CB4B00F40C23 /* Main.storyboard in Resources */,
 			);

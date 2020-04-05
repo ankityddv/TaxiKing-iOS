@@ -11,9 +11,8 @@ import UIKit
 class mvc3: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
 	// Array
-    var fromArr = ["Delhi","LA","","","","",""]
-    var toArr = ["LA","Texas","","","","",""]
-    
+	var fromArr = ["VIT Vellore","Bangalore","Chennai","VIT Vellore","Banagalore"]
+    var toArr = ["Chennai","Nayoda","Chennai","VIT Chennai","VIT Vellore"]
 	
 	// User's previous rides Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

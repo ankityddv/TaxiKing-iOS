@@ -273,7 +273,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRad">
                                                 <real key="value" value="5"/>
@@ -472,14 +472,14 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJi-K0-pID">
-                                                            <rect key="frame" x="29" y="41" width="123" height="22"/>
+                                                            <rect key="frame" x="54" y="41" width="123" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <color key="textColor" red="0.14117647059999999" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Al-As-9X3">
-                                                            <rect key="frame" x="29" y="106" width="123" height="22"/>
+                                                            <rect key="frame" x="54" y="106" width="123" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <color key="textColor" red="0.14117647059999999" green="0.1647058824" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -489,13 +489,17 @@
                                                             <rect key="frame" x="285" y="49" width="70" height="70"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ankit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-TM-xhW">
-                                                            <rect key="frame" x="143" y="57" width="131" height="54"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ankit Yadav" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-TM-xhW">
+                                                            <rect key="frame" x="184" y="57" width="90" height="54"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-dX-R4Q">
+                                                            <rect key="frame" x="12" y="41" width="34" height="87"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </view>
@@ -503,6 +507,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fromLabel" destination="GJi-K0-pID" id="K6O-Nh-wES"/>
+                                            <outlet property="linkIconImageView" destination="6qe-dX-R4Q" id="g0M-Zz-Pz6"/>
                                             <outlet property="myView" destination="S3X-hi-2ct" id="Nbo-P1-5aM"/>
                                             <outlet property="nameLabel" destination="vQM-TM-xhW" id="Rqc-hA-Rre"/>
                                             <outlet property="profileImageView" destination="d6o-y3-GAb" id="kHB-w9-Ko4"/>
@@ -640,7 +645,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="oVX-4j-Wdn" customClass="MessageVC" customModule="Taxi_King" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5Z-Yb-zAj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="BHV-55-FSj"/>
@@ -661,17 +666,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QVU-9f-zEG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add a ride" id="Lko-qp-B3w">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="person" catalog="system" id="2R4-Wj-SRv">
-                            <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="message" catalog="system" id="G13-gV-a4F">
-                            <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="oVX-4j-Wdn" kind="show" id="4fA-Yf-alt"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add a ride" id="Lko-qp-B3w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-WZ-mfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -736,17 +731,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="J6y-m5-QgF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Rides" id="szV-Nd-h64">
-                        <barButtonItem key="leftBarButtonItem" image="person" catalog="system" id="yJ1-58-5aZ">
-                            <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="message" catalog="system" id="sfL-nD-LoG">
-                            <color key="tintColor" red="0.08235294118" green="0.73333333329999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="oVX-4j-Wdn" kind="show" id="cWg-1P-vR6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Your Rides" id="szV-Nd-h64"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8F-9K-91K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -895,6 +880,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gQ2-zm-qfa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -919,8 +907,7 @@
         <image name="user" width="480" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mTX-xN-RNQ"/>
-        <segue reference="cWg-1P-vR6"/>
+        <segue reference="ysR-sf-hag"/>
         <segue reference="Evp-C5-hbq"/>
         <segue reference="lMQ-u3-e91"/>
     </inferredMetricsTieBreakers>

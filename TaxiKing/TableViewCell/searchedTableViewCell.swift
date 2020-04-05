@@ -15,7 +15,8 @@ class searchedTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var myView: UIView!
-    
+	@IBOutlet weak var linkIconImageView: UIImageView!
+	
     
 
     override func awakeFromNib() {
