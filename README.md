@@ -14,7 +14,7 @@ Taxi King allows to book ride, offer rides, send and receive text messages.
 Your following questions are answered in the project:
 
 1. How to make a Login and singup page with Firebase?
-2. Hwo to upload a profile picture, name and mobile number?
+2. How to upload a profile picture, name and mobile number?
 3. How to hide a keyboard when touched out of keyboard?
 4. How to custome animated your views, Textfileds and other elements when keyboard is pushed?
 5. How to make a custom loader with GIF?
